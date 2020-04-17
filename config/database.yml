@@ -44,11 +44,11 @@ test:
 #
 # You can use this database configuration with:
 #
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
-#
+  production:
+     url: postgres://zxhqmskvgwtxam:e8c9e9f26a48057001da11d61e9f0701eefee6ab628da4204b97c7e4b5948915@ec2-23-20-129-146.compute-1.amazonaws.com:5432/d6jt46jpospsg4
+
 production:
   <<: *default
-  database: sql2.freemysqlhosting.net
-  username: sql2334068
+  database: successroad_production
+  username: successroad
   password: <%= ENV['SUCCESSROAD_DATABASE_PASSWORD'] %>
