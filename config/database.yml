@@ -11,7 +11,6 @@
 #
 default: &default
    adapter: postgresql
-    encoding: unicode
     database: d14npukrj6njji
     username: ildmiztzrgxxzm
     password: 6fd3393e109d0f744e0240c808e3cbabc71a671fabc02c45d4f13eebb35b0f9b
