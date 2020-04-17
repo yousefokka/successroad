@@ -12,7 +12,7 @@ class JobsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create job" do
     assert_difference('Job.count') do
-      post jobs_url, params: { job: { address: @job.address, catagory: @job.catagory, city: @job.city, country: @job.country, description: @job.description, experience: @job.experience, gander: @job.gander, qualification: @job.qualification, salary: @job.salary, title: @job.title, type: @job.type } }, as: :json
+      post jobs_url, params: { job: { address: @job.address, catagory: @job.catagory, city: @job.city, country: @job.country, description: @job.description, experience: @job.experience, gander: @job.gander, jtype: @job.jtype, qualification: @job.qualification, salary: @job.salary, title: @job.title } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class JobsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update job" do
-    patch job_url(@job), params: { job: { address: @job.address, catagory: @job.catagory, city: @job.city, country: @job.country, description: @job.description, experience: @job.experience, gander: @job.gander, qualification: @job.qualification, salary: @job.salary, title: @job.title, type: @job.type } }, as: :json
+    patch job_url(@job), params: { job: { address: @job.address, catagory: @job.catagory, city: @job.city, country: @job.country, description: @job.description, experience: @job.experience, gander: @job.gander, jtype: @job.jtype, qualification: @job.qualification, salary: @job.salary, title: @job.title } }, as: :json
     assert_response 200
   end
 

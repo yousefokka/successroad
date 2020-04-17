@@ -2,7 +2,7 @@
 
 one:
   title: MyString
-  type: 
+  jtype: MyString
   catagory: MyString
   address: MyString
   salary: MyString
@@ -15,7 +15,7 @@ one:
 
 two:
   title: MyString
-  type: 
+  jtype: MyString
   catagory: MyString
   address: MyString
   salary: MyString

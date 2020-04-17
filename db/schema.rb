@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_16_165154) do
+ActiveRecord::Schema.define(version: 2020_04_17_025707) do
 
   create_table "ideas", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "title"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_04_16_165154) do
 
   create_table "jobs", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "title"
-    t.string "type"
+    t.string "jtype"
     t.string "catagory"
     t.string "address"
     t.string "salary"
