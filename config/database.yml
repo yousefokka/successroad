@@ -9,6 +9,14 @@
 # And be sure to use new-style password hashing:
 #   https://dev.mysql.com/doc/refman/5.7/en/password-hashing.html
 #
+default: &default
+   adapter: postgresql
+    encoding: unicode
+    database: d14npukrj6njji
+    username: ildmiztzrgxxzm
+    password: 6fd3393e109d0f744e0240c808e3cbabc71a671fabc02c45d4f13eebb35b0f9b
+    host: ec2-52-6-143-153.compute-1.amazonaws.com
+    port: 5439
 
 development:
   <<: *default
