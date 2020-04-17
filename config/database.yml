@@ -49,9 +49,6 @@ test:
 #
 production:
   <<: *default
-Database: d14npukrj6njji
-Host: ec2-52-6-143-153.compute-1.amazonaws.com
-User: ildmiztzrgxxzm
-Port: 5432
-Password: 6fd3393e109d0f744e0240c808e3cbabc71a671fabc02c45d4f13eebb35b0f9b
-URI: postgres://ildmiztzrgxxzm:6fd3393e109d0f744e0240c808e3cbabc71a671fabc02c45d4f13eebb35b0f9b@ec2-52-6-143-153.compute-1.amazonaws.com:5432/d14npukrj6njji
+  database: successroad_production
+  username: successroad
+  password: <%= ENV['SUCCESSROAD_DATABASE_PASSWORD'] %>
