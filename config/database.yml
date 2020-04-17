@@ -9,13 +9,6 @@
 # And be sure to use new-style password hashing:
 #   https://dev.mysql.com/doc/refman/5.7/en/password-hashing.html
 #
-default: &default
-  adapter: mysql2
-  encoding: utf8mb4
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password: root1234
-  socket: /var/run/mysqld/mysqld.sock
 
 development:
   <<: *default
@@ -48,7 +41,11 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: successroad_production
-  username: successroad
-  password: <%= ENV['SUCCESSROAD_DATABASE_PASSWORD'] %>
+    <<: *default
+    adapter: postgresql
+    encoding: unicode
+    database: d14npukrj6njji
+    username: ildmiztzrgxxzm
+    password: 6fd3393e109d0f744e0240c808e3cbabc71a671fabc02c45d4f13eebb35b0f9b
+    host: ec2-52-6-143-153.compute-1.amazonaws.com
+    port: 5439
