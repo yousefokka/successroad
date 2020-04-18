@@ -45,11 +45,13 @@ test:
 # You can use this database configuration with:
 #
   production:
-     url: postgres://zxhqmskvgwtxam:e8c9e9f26a48057001da11d61e9f0701eefee6ab628da4204b97c7e4b5948915@ec2-23-20-129-146.compute-1.amazonaws.com:5432/d6jt46jpospsg4
+    URI: postgres://rycwqczxciuzvj:bc0c5b41f3be7f0815bfc6514ca48c6c41246223f037f9d071ad9c6b6e80a63e@ec2-52-7-39-178.compute-1.amazonaws.com:5432/da3s9giu9s5qf2
+
 
 production:
   <<: *default
-  database: d6jt46jpospsg4
-  username: zxhqmskvgwtxam
-  password: e8c9e9f26a48057001da11d61e9f0701eefee6ab628da4204b97c7e4b5948915
-  host: ec2-23-20-129-146.compute-1.amazonaws.com
+  database: da3s9giu9s5qf2
+  user: rycwqczxciuzvj
+  password: bc0c5b41f3be7f0815bfc6514ca48c6c41246223f037f9d071ad9c6b6e80a63e
+  host: ec2-52-7-39-178.compute-1.amazonaws.com
+  port: 5432
