@@ -708,3 +708,600 @@ Processing by JobsController#index as HTML
 Completed 200 OK in 17ms (Views: 12.9ms | ActiveRecord: 2.2ms | Allocations: 11869)
 
 
+Started GET "/favicon.ico" for 85.144.163.118 at 2020-04-18 19:57:43 +0000
+  
+ActiveRecord::ConnectionNotEstablished (No connection pool with 'primary' found.):
+  
+activerecord (6.0.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:1117:in `retrieve_connection'
+activerecord (6.0.2.2) lib/active_record/connection_handling.rb:238:in `retrieve_connection'
+activerecord (6.0.2.2) lib/active_record/connection_handling.rb:206:in `connection'
+activerecord (6.0.2.2) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE `successroad_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE `successroad_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('542275819140529950', 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateIdeas (20200416164413)
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE `ideas` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `Management` varchar(255), `ideacatagory` varchar(255), `address` varchar(255), `funding` varchar(255), `ideaDescription` text, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200416164413')[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateJobs (20200417025707)
+  [1m[35m (9.8ms)[0m  [1m[35mCREATE TABLE `jobs` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `jtype` varchar(255), `catagory` varchar(255), `address` varchar(255), `salary` varchar(255), `gander` varchar(255), `country` varchar(255), `city` varchar(255), `qualification` varchar(255), `experience` varchar(255), `description` text, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (2.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200417025707')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2020-04-18 20:01:53.689785', '2020-04-18 20:01:53.689785')[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('542275819140529950')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (14.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS `successroad_development`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS `successroad_test`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE `successroad_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE `successroad_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('542275819140529950', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateIdeas (20200416164413)
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE `ideas` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `Management` varchar(255), `ideacatagory` varchar(255), `address` varchar(255), `funding` varchar(255), `ideaDescription` text, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200416164413')[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateJobs (20200417025707)
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE `jobs` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `jtype` varchar(255), `catagory` varchar(255), `address` varchar(255), `salary` varchar(255), `gander` varchar(255), `country` varchar(255), `city` varchar(255), `qualification` varchar(255), `experience` varchar(255), `description` text, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (1.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200417025707')[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2020-04-18 20:02:36.904390', '2020-04-18 20:02:36.904390')[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('542275819140529950')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 85.144.163.118 at 2020-04-18 20:02:50 +0000
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.5.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.5.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.0ms | Allocations: 461)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 2482)
+
+
+Started GET "/favicon.ico" for 85.144.163.118 at 2020-04-18 20:02:50 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/jobs" for 85.144.163.118 at 2020-04-18 20:02:54 +0000
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT `jobs`.* FROM `jobs`[0m
+  ↳ app/controllers/jobs_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 3.0ms | ActiveRecord: 1.4ms | Allocations: 2224)
+
+
+Started POST "/jobs" for 85.144.163.118 at 2020-04-18 20:03:11 +0000
+Processing by JobsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 139)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: job):
+  
+app/controllers/jobs_controller.rb:49:in `job_params'
+app/controllers/jobs_controller.rb:18:in `create'
+Started POST "/jobs" for 85.144.163.118 at 2020-04-18 20:05:50 +0000
+  [1m[35m (1.1ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by JobsController#create as */*
+Completed 400 Bad Request in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 644)
+
+
+Started POST "/jobs" for 85.144.163.118 at 2020-04-18 20:06:57 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"title"=>"Back-end Developer", "jtype"=>"senior", "catagory"=>"web Developent", "address"=>"egypt", "salary"=>"1200", "gander"=>"male", "country"=>"cairo", "city"=>"Dokee", "qualification"=>"computer science master", "experience"=>"3", "description"=>"this is small company need new web developer"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+  [1m[36mJob Create (0.3ms)[0m  [1m[32mINSERT INTO `jobs` (`title`, `jtype`, `catagory`, `address`, `salary`, `gander`, `country`, `city`, `qualification`, `experience`, `description`, `created_at`, `updated_at`) VALUES ('Back-end Developer', 'senior', 'web Developent', 'egypt', '1200', 'male', 'cairo', 'Dokee', 'computer science master', '3', 'this is small company need new web developer', '2020-04-18 20:06:57.745712', '2020-04-18 20:06:57.745712')[0m
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+Completed 201 Created in 20ms (Views: 0.9ms | ActiveRecord: 3.2ms | Allocations: 13297)
+
+
+Started POST "/jobs" for 85.144.163.118 at 2020-04-18 20:10:38 +0000
+Processing by JobsController#create as */*
+  Parameters: {"title"=>"Back-end Developer", "jtype"=>"senior", "catagory"=>"web Developent", "address"=>"egypt", "salary"=>"1200", "gander"=>"male", "country"=>"cairo", "city"=>"Dokee", "qualification"=>"computer science master", "experience"=>"3", "description"=>"this is small company need new web developer", "job"=>{"title"=>"Back-end Developer", "jtype"=>"senior", "catagory"=>"web Developent", "address"=>"egypt", "salary"=>"1200", "gander"=>"male", "country"=>"cairo", "city"=>"Dokee", "qualification"=>"computer science master", "experience"=>"3", "description"=>"this is small company need new web developer"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+  [1m[36mJob Create (2.2ms)[0m  [1m[32mINSERT INTO `jobs` (`title`, `jtype`, `catagory`, `address`, `salary`, `gander`, `country`, `city`, `qualification`, `experience`, `description`, `created_at`, `updated_at`) VALUES ('Back-end Developer', 'senior', 'web Developent', 'egypt', '1200', 'male', 'cairo', 'Dokee', 'computer science master', '3', 'this is small company need new web developer', '2020-04-18 20:10:38.914051', '2020-04-18 20:10:38.914051')[0m
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+Completed 201 Created in 9ms (Views: 0.7ms | ActiveRecord: 3.0ms | Allocations: 2828)
+
+
+Started GET "/jobs" for 85.144.163.118 at 2020-04-18 20:10:42 +0000
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT `jobs`.* FROM `jobs`[0m
+  ↳ app/controllers/jobs_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 1435)
+
+
+Started POST "/jobs" for 85.144.163.118 at 2020-04-18 20:10:54 +0000
+Processing by JobsController#create as */*
+  Parameters: {"title"=>"Back-end Developer", "jtype"=>"senior", "catagory"=>"web Developent", "job"=>{"title"=>"Back-end Developer", "jtype"=>"senior", "catagory"=>"web Developent"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+  [1m[36mJob Create (0.3ms)[0m  [1m[32mINSERT INTO `jobs` (`title`, `jtype`, `catagory`, `created_at`, `updated_at`) VALUES ('Back-end Developer', 'senior', 'web Developent', '2020-04-18 20:10:54.861443', '2020-04-18 20:10:54.861443')[0m
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+Completed 201 Created in 8ms (Views: 0.5ms | ActiveRecord: 2.1ms | Allocations: 2602)
+
+
+Started GET "/jobs" for 85.144.163.118 at 2020-04-18 20:10:58 +0000
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT `jobs`.* FROM `jobs`[0m
+  ↳ app/controllers/jobs_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 1639)
+
+
+Started POST "/jobs" for 85.144.163.118 at 2020-04-18 20:14:40 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{}}
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 182)
+
+
+Started GET "/jobs" for 85.144.163.118 at 2020-04-18 20:21:17 +0000
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT `jobs`.* FROM `jobs`[0m
+  ↳ app/controllers/jobs_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.5ms | Allocations: 1635)
+
+
+Started GET "/jobs/400" for 85.144.163.118 at 2020-04-18 20:22:48 +0000
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"400"}
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 400 LIMIT 1[0m
+  ↳ app/controllers/jobs_controller.rb:44:in `set_job'
+Completed 404 Not Found in 6ms (ActiveRecord: 1.4ms | Allocations: 2723)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Job with 'id'=400):
+  
+app/controllers/jobs_controller.rb:44:in `set_job'
+Started GET "/jobs/400" for 85.144.163.118 at 2020-04-18 20:23:59 +0000
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"400"}
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 400 LIMIT 1[0m
+  ↳ app/controllers/jobs_controller.rb:44:in `set_job'
+Completed 404 Not Found in 6ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 2802)
+
+
+Started GET "/jobs/400" for 85.144.163.118 at 2020-04-18 20:27:24 +0000
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"400"}
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 400 LIMIT 1[0m
+  ↳ app/controllers/jobs_controller.rb:44:in `set_job'
+Completed 404 Not Found in 6ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 2801)
+
+
+Started GET "/jobs/400" for 85.144.163.118 at 2020-04-18 20:27:25 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"400"}
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 400 LIMIT 1[0m
+  ↳ app/controllers/jobs_controller.rb:44:in `set_job'
+Completed 404 Not Found in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 686)
+
+
+Started GET "/jobs/400" for 85.144.163.118 at 2020-04-18 20:27:26 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"400"}
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 400 LIMIT 1[0m
+  ↳ app/controllers/jobs_controller.rb:44:in `set_job'
+Completed 404 Not Found in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 686)
+
+
+Started GET "/jobs/400" for 85.144.163.118 at 2020-04-18 20:27:27 +0000
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"400"}
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 400 LIMIT 1[0m
+  ↳ app/controllers/jobs_controller.rb:44:in `set_job'
+Completed 404 Not Found in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 686)
+
+
+Started POST "/jobs" for 85.144.163.118 at 2020-04-18 20:34:14 +0000
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{}}
+Completed 400 Bad Request in 1ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 303)
+
+
+Started POST "/jobs" for 85.144.163.118 at 2020-04-18 20:34:29 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"title"=>"BLA"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+  [1m[36mJob Create (2.3ms)[0m  [1m[32mINSERT INTO `jobs` (`title`, `created_at`, `updated_at`) VALUES ('BLA', '2020-04-18 20:34:29.743421', '2020-04-18 20:34:29.743421')[0m
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+Completed 201 Created in 16ms (Views: 0.9ms | ActiveRecord: 3.3ms | Allocations: 12149)
+
+
+Started POST "/jobs" for 85.144.163.118 at 2020-04-18 20:34:34 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"title"=>""}}
+Completed 422 Unprocessable Entity in 7ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 3743)
+
+
+Started POST "/jobs" for 85.144.163.118 at 2020-04-18 20:35:02 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"title"=>"Backend", "jtype"=>"asd"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+  [1m[36mJob Create (0.3ms)[0m  [1m[32mINSERT INTO `jobs` (`title`, `jtype`, `created_at`, `updated_at`) VALUES ('Backend', 'asd', '2020-04-18 20:35:02.281831', '2020-04-18 20:35:02.281831')[0m
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+Completed 201 Created in 6ms (Views: 0.6ms | ActiveRecord: 1.8ms | Allocations: 2584)
+
+
+Started POST "/jobs" for 85.144.163.118 at 2020-04-18 20:35:11 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"jtype"=>"asd"}}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 709)
+
+
+Started POST "/jobs" for 85.144.163.118 at 2020-04-18 20:36:13 +0000
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ArgumentError (You need to supply at least one attribute):
+  
+app/models/job.rb:2:in `<class:Job>'
+app/models/job.rb:1:in `<top (required)>'
+  [1m[35m (15.1ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('542275819140529950', 0)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateUsers (20200428160712)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('542275819140529950')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('542275819140529950', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateUsers (20200428160712)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('542275819140529950')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('542275819140529950', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateUsers (20200428160712)
+  [1m[35m (13.5ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `password` varchar(255), `auth_token` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, UNIQUE INDEX `index_users_on_auth_token`  (`auth_token`))[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200428160712')[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('542275819140529950')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (4.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`auth_token` = 'NWSzjCdLMDigiNSBnDaegkWb' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`auth_token`, `created_at`, `updated_at`) VALUES ('NWSzjCdLMDigiNSBnDaegkWb', '2020-04-28 16:18:40.315191', '2020-04-28 16:18:40.315191')[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`auth_token` = 'm1dZXVWTgYucBWmpSscz9Ufy' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`auth_token`, `created_at`, `updated_at`) VALUES ('m1dZXVWTgYucBWmpSscz9Ufy', '2020-04-28 16:18:52.145724', '2020-04-28 16:18:52.145724')[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`auth_token` = 'qRd3xKcWpqbGq6x49xtWFdJN' LIMIT 1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO `users` (`auth_token`, `created_at`, `updated_at`) VALUES ('qRd3xKcWpqbGq6x49xtWFdJN', '2020-04-28 16:18:55.410524', '2020-04-28 16:18:55.410524')[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`auth_token` = 'xvfVZpPze6ewfma2dhjk7kPC' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`auth_token`, `created_at`, `updated_at`) VALUES ('xvfVZpPze6ewfma2dhjk7kPC', '2020-04-28 16:18:56.632261', '2020-04-28 16:18:56.632261')[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`auth_token` = 'uGvNzEoKJxTdF5PRPJZMDs3k' LIMIT 1[0m
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO `users` (`auth_token`, `created_at`, `updated_at`) VALUES ('uGvNzEoKJxTdF5PRPJZMDs3k', '2020-04-28 16:18:57.676985', '2020-04-28 16:18:57.676985')[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+DEPRECATION WARNING: Uniqueness validator will no longer enforce case sensitive comparison in Rails 6.1. To continue case sensitive comparison on the :auth_token attribute in User model, pass `case_sensitive: true` option explicitly to the uniqueness validator. (called from irb_binding at (irb):2)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`auth_token` = BINARY 'uGvNzEoKJxTdF5PRPJZMDs3k' AND `users`.`id` != 5 LIMIT 1[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE `users` SET `users`.`name` = 'Hamda', `users`.`updated_at` = '2020-04-28 17:21:31.026255' WHERE `users`.`id` = 5[0m
+  [1m[35m (121.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+Started GET "/jobs" for 35.195.247.51 at 2020-04-28 17:31:16 +0000
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+SyntaxError (/root/successroad/app/controllers/base_controller.rb:14: syntax error, unexpected ':', expecting keyword_end
+      return json: {error: {message: 'unauthori...
+                 ^
+/root/successroad/app/controllers/base_controller.rb:14: syntax error, unexpected ',', expecting keyword_end
+...message: 'unauthorized user'}}, 401
+...                              ^
+/root/successroad/app/controllers/base_controller.rb:19: syntax error, unexpected ':', expecting keyword_end
+      return json: {error: {message: 'User Not ...
+                 ^
+/root/successroad/app/controllers/base_controller.rb:19: syntax error, unexpected ',', expecting keyword_end
+...: {message: 'User Not found'}}, 403
+...                              ^):
+  
+app/controllers/base_controller.rb:14: syntax error, unexpected ':', expecting keyword_end
+app/controllers/base_controller.rb:14: syntax error, unexpected ',', expecting keyword_end
+app/controllers/base_controller.rb:19: syntax error, unexpected ':', expecting keyword_end
+app/controllers/base_controller.rb:19: syntax error, unexpected ',', expecting keyword_end
+app/controllers/base_controller.rb:14: syntax error, unexpected ':', expecting keyword_end
+app/controllers/base_controller.rb:14: syntax error, unexpected ',', expecting keyword_end
+app/controllers/base_controller.rb:19: syntax error, unexpected ':', expecting keyword_end
+app/controllers/base_controller.rb:19: syntax error, unexpected ',', expecting keyword_end
+app/controllers/jobs_controller.rb:1:in `<top (required)>'
+Started GET "/favicon.ico" for 35.195.247.51 at 2020-04-28 17:31:16 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/jobs" for 35.195.247.51 at 2020-04-28 17:31:55 +0000
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+SyntaxError (/root/successroad/app/controllers/base_controller.rb:14: syntax error, unexpected ':', expecting keyword_end
+      return json: {error: {message: 'unauthori...
+                 ^
+/root/successroad/app/controllers/base_controller.rb:14: syntax error, unexpected ',', expecting keyword_end
+...message: 'unauthorized user'}}, status: 401
+...                              ^
+/root/successroad/app/controllers/base_controller.rb:19: syntax error, unexpected ':', expecting keyword_end
+      return json: {error: {message: 'User Not ...
+                 ^
+/root/successroad/app/controllers/base_controller.rb:19: syntax error, unexpected ',', expecting keyword_end
+...: {message: 'User Not found'}}, status: 403
+...                              ^):
+  
+app/controllers/base_controller.rb:14: syntax error, unexpected ':', expecting keyword_end
+app/controllers/base_controller.rb:14: syntax error, unexpected ',', expecting keyword_end
+app/controllers/base_controller.rb:19: syntax error, unexpected ':', expecting keyword_end
+app/controllers/base_controller.rb:19: syntax error, unexpected ',', expecting keyword_end
+app/controllers/base_controller.rb:14: syntax error, unexpected ':', expecting keyword_end
+app/controllers/base_controller.rb:14: syntax error, unexpected ',', expecting keyword_end
+app/controllers/base_controller.rb:19: syntax error, unexpected ':', expecting keyword_end
+app/controllers/base_controller.rb:19: syntax error, unexpected ',', expecting keyword_end
+app/controllers/jobs_controller.rb:1:in `<top (required)>'
+Started GET "/jobs" for 35.195.247.51 at 2020-04-28 17:31:56 +0000
+  
+SyntaxError (/root/successroad/app/controllers/base_controller.rb:14: syntax error, unexpected ':', expecting keyword_end
+      return json: {error: {message: 'unauthori...
+                 ^
+/root/successroad/app/controllers/base_controller.rb:14: syntax error, unexpected ',', expecting keyword_end
+...message: 'unauthorized user'}}, status: 401
+...                              ^
+/root/successroad/app/controllers/base_controller.rb:19: syntax error, unexpected ':', expecting keyword_end
+      return json: {error: {message: 'User Not ...
+                 ^
+/root/successroad/app/controllers/base_controller.rb:19: syntax error, unexpected ',', expecting keyword_end
+...: {message: 'User Not found'}}, status: 403
+...                              ^):
+  
+app/controllers/base_controller.rb:14: syntax error, unexpected ':', expecting keyword_end
+app/controllers/base_controller.rb:14: syntax error, unexpected ',', expecting keyword_end
+app/controllers/base_controller.rb:19: syntax error, unexpected ':', expecting keyword_end
+app/controllers/base_controller.rb:19: syntax error, unexpected ',', expecting keyword_end
+app/controllers/base_controller.rb:14: syntax error, unexpected ':', expecting keyword_end
+app/controllers/base_controller.rb:14: syntax error, unexpected ',', expecting keyword_end
+app/controllers/base_controller.rb:19: syntax error, unexpected ':', expecting keyword_end
+app/controllers/base_controller.rb:19: syntax error, unexpected ',', expecting keyword_end
+app/controllers/jobs_controller.rb:1:in `<top (required)>'
+Started GET "/jobs" for 35.195.247.51 at 2020-04-28 17:31:57 +0000
+  
+SyntaxError (/root/successroad/app/controllers/base_controller.rb:14: syntax error, unexpected ':', expecting keyword_end
+      return json: {error: {message: 'unauthori...
+                 ^
+/root/successroad/app/controllers/base_controller.rb:14: syntax error, unexpected ',', expecting keyword_end
+...message: 'unauthorized user'}}, status: 401
+...                              ^
+/root/successroad/app/controllers/base_controller.rb:19: syntax error, unexpected ':', expecting keyword_end
+      return json: {error: {message: 'User Not ...
+                 ^
+/root/successroad/app/controllers/base_controller.rb:19: syntax error, unexpected ',', expecting keyword_end
+...: {message: 'User Not found'}}, status: 403
+...                              ^):
+  
+app/controllers/base_controller.rb:14: syntax error, unexpected ':', expecting keyword_end
+app/controllers/base_controller.rb:14: syntax error, unexpected ',', expecting keyword_end
+app/controllers/base_controller.rb:19: syntax error, unexpected ':', expecting keyword_end
+app/controllers/base_controller.rb:19: syntax error, unexpected ',', expecting keyword_end
+app/controllers/base_controller.rb:14: syntax error, unexpected ':', expecting keyword_end
+app/controllers/base_controller.rb:14: syntax error, unexpected ',', expecting keyword_end
+app/controllers/base_controller.rb:19: syntax error, unexpected ':', expecting keyword_end
+app/controllers/base_controller.rb:19: syntax error, unexpected ',', expecting keyword_end
+app/controllers/jobs_controller.rb:1:in `<top (required)>'
+Started GET "/jobs" for 35.195.247.51 at 2020-04-28 17:32:28 +0000
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by JobsController#index as HTML
+Filter chain halted as :auth_user rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 224)
+
+
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+Started POST "/jobs" for 35.195.247.51 at 2020-04-28 17:33:18 +0000
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ArgumentError (You need to supply at least one attribute):
+  
+app/models/job.rb:2:in `<class:Job>'
+app/models/job.rb:1:in `<top (required)>'
+Started GET "/jobs" for 35.195.247.51 at 2020-04-28 17:33:34 +0000
+Processing by JobsController#index as */*
+  Parameters: {"job"=>{"jtype"=>"asd"}}
+Filter chain halted as :auth_user rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 220)
+
+
+Started POST "/jobs" for 35.195.247.51 at 2020-04-28 17:33:38 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"jtype"=>"asd"}}
+Filter chain halted as :auth_user rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 145)
+
+
+Started POST "/jobs" for 35.195.247.51 at 2020-04-28 17:33:41 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"jtype"=>"asd"}}
+Filter chain halted as :auth_user rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 145)
+
+
+Started POST "/jobs" for 35.195.247.51 at 2020-04-28 17:33:42 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"jtype"=>"asd"}}
+Filter chain halted as :auth_user rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 145)
+
+
+Started POST "/jobs" for 35.195.247.51 at 2020-04-28 17:33:57 +0000
+Processing by JobsController#create as */*
+  Parameters: {"job"=>{"jtype"=>"asd"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`auth_token` = 'uGvNzEoKJxTdF5PRPJZMDs3k' LIMIT 1[0m
+  ↳ app/controllers/base_controller.rb:16:in `auth_user'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+  [1m[36mJob Create (2.1ms)[0m  [1m[32mINSERT INTO `jobs` (`jtype`, `created_at`, `updated_at`) VALUES ('asd', '2020-04-28 17:33:58.003897', '2020-04-28 17:33:58.003897')[0m
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+Completed 201 Created in 58ms (Views: 1.3ms | ActiveRecord: 12.9ms | Allocations: 22373)
+
+
+Started POST "/jobs" for 35.195.247.51 at 2020-04-28 17:36:16 +0000
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ArgumentError (You need to supply at least one attribute):
+  
+app/models/job.rb:2:in `<class:Job>'
+app/models/job.rb:1:in `<top (required)>'

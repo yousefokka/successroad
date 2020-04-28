@@ -10,11 +10,12 @@
 #   https://dev.mysql.com/doc/refman/5.7/en/password-hashing.html
 #
 default: &default
-  database: da3s9giu9s5qf2
-  user: rycwqczxciuzvj
-  password: bc0c5b41f3be7f0815bfc6514ca48c6c41246223f037f9d071ad9c6b6e80a63e
-  host: ec2-52-7-39-178.compute-1.amazonaws.com
-  port: 5432
+  adapter: mysql2
+  encoding: utf8mb4
+  user: root
+  password:
+  host: localhost
+  port: 3306
 
 development:
   <<: *default
