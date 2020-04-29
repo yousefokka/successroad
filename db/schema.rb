@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_17_025707) do
+ActiveRecord::Schema.define(version: 2020_04_28_160712) do
 
-  create_table "ideas", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "ideas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "title"
     t.string "Management"
     t.string "ideacatagory"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2020_04_17_025707) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "jobs", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "jobs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "title"
     t.string "jtype"
     t.string "catagory"
@@ -37,6 +37,16 @@ ActiveRecord::Schema.define(version: 2020_04_17_025707) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password"
+    t.string "auth_token"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["auth_token"], name: "index_users_on_auth_token", unique: true
   end
 
 end
